@@ -59,7 +59,7 @@
   <title>Private School - Student Hub</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <style>
+   <style>
     body {
       margin: 0;
       font-family: 'Inter', sans-serif;
@@ -67,7 +67,7 @@
       color: #333;
     }
     header {
-      background: #040a31;
+      background: #4f46e5;
       color: white;
       padding: 1rem 2rem;
       display: flex;
@@ -96,7 +96,7 @@
       padding: 2rem;
     }
     .card {
-      background: rgba(39, 63, 1, 0.158);
+      background: white;
       padding: 2rem;
       margin-bottom: 2rem;
       border-radius: 16px;
@@ -114,7 +114,7 @@
     }
     .feedback-form button {
       margin-top: 1rem;
-      background: #37363a;
+      background: #4f46e5;
       color: white;
       border: none;
       padding: 0.75rem 1.5rem;
@@ -135,6 +135,25 @@
     .whatsapp-invite i {
       font-size: 1.5rem;
     }
+    .side-hustle {
+      background: #fff9ed;
+      border-left: 6px solid #f59e0b;
+      padding: 1.5rem;
+      margin-bottom: 2rem;
+      border-radius: 12px;
+    }
+    .side-hustle h3 {
+      margin-top: 0;
+      color: #b45309;
+    }
+    .side-hustle ul {
+      list-style-type: none;
+      padding-left: 1rem;
+    }
+    .side-hustle ul li::before {
+      content: '💼';
+      margin-right: 0.5rem;
+    }
   </style>
 </head>
 <body>
@@ -151,6 +170,16 @@
   </section>
 
   <div class="container">
+    <div class="side-hustle">
+      <h3>📢 Student Side Hustles</h3>
+      <ul>
+        <li>Math Tutoring - Contact: Zanele (zanele@campus.edu)</li>
+        <li>Logo Design - Contact: Thabo (thabo@campus.edu)</li>
+        <li>Essay Editing - Contact: Nandi (nandi@campus.edu)</li>
+        <li>Custom T-Shirts - Contact: Bongani (bongani@campus.edu)</li>
+      </ul>
+    </div>
+
     <div class="card">
       <h3>Feedback</h3>
       <form class="feedback-form">
@@ -160,20 +189,4 @@
     </div>
   </div>
 </body>
-
-  <!-- Profile Section -->
-  <section class="bg-white py-16 px-6" id="profile">
-    <div class="max-w-4xl mx-auto text-center">
-      <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="Profile Icon" class="mx-auto w-24 mb-6" />
-      <h3 class="text-2xl font-bold mb-2">Custom Profiles</h3>
-      <p class="text-gray-600">Express yourself with profile pictures, bios, badges, and more. Stay connected your way.</p>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="bg-gray-800 text-white py-6 mt-10 text-center">
-    <p>&copy; 2025 Private School. Designed for student success.</p>
-  </footer>
-</body>
-
 </html>
