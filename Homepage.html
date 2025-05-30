@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Private School - Student Hub</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      transition: background 0.3s, color 0.3s;
+    }
+    .card {
+      background: white;
+      padding: 1.5rem;
+      border-radius: 1rem;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    .dark-mode .card {
+      background: #1f2937;
+      color: white;
+    }
+    .btn {
+      @apply bg-blue-600 text-white px-4 py-2 rounded-full font-semibold shadow hover:bg-blue-700;
+    }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-800" id="body">
+  <!-- Header -->
+  <header class="bg-white shadow-md py-4 px-6 flex justify-between items-center">
+    <h1 class="text-2xl font-bold text-blue-600">Private School</h1>
+    <div class="flex items-center gap-4">
+      <span id="clock" class="font-semibold text-gray-700"></span>
+      <button onclick="toggleDarkMode()" class="text-sm font-medium bg-gray-200 px-3 py-1 rounded hover:bg-gray-300">🌙 Dark Mode</button>
+      <a class="whatsapp-invite flex items-center gap-2 bg-green-500 text-white px-4 py-2 rounded-lg font-semibold hover:bg-green-600" href="https://wa.me/27714889774" target="_blank">
+        <i class="fab fa-whatsapp"></i> Join WhatsApp
+      </a>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="text-center py-16 bg-gradient-to-r from-blue-600 to-indigo-600 text-white">
+    <h2 class="text-4xl font-bold mb-4">Your Academic & Social Life Organized</h2>
+    <p class="text-lg mb-8">Join events, share ideas, and build connections — all in one place.</p>
+    <button class="bg-white text-blue-600 font-semibold px-6 py-2 rounded-full shadow hover:bg-gray-100">Get Started</button>
+  </section>
+
+  <!-- Events Section -->
+  <section class="py-12 px-6">
+    <h2 class="text-3xl font-bold text-center text-blue-700 mb-8">Upcoming Events</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="card">
+        <h3 class="text-xl font-semibold mb-2">Career Talk: Resume Building</h3>
+        <p class="text-gray-600 mb-2">Learn how to write a winning resume from industry experts.</p>
+        <p class="text-sm text-gray-500">Date: June 10, 2025</p>
+      </div>
+      <div class="card">
+        <h3 class="text-xl font-semibold mb-2">Group Study Session</h3>
+        <p class="text-gray-600 mb-2">Join peers to prepare for upcoming exams together.</p>
+        <p class="text-sm text-gray-500">Date: June 12, 2025</p>
+      </div>
+      <div class="card">
+        <h3 class="text-xl font-semibold mb-2">Social Meetup</h3>
+        <p class="text-gray-600 mb-2">Meet new people and expand your university network.</p>
+        <p class="text-sm text-gray-500">Date: June 15, 2025</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Calendar Section -->
+  <section class="py-12 px-6 bg-gray-100">
+    <h2 class="text-3xl font-bold text-center text-blue-700 mb-8">Campus Calendar</h2>
+    <div class="card max-w-4xl mx-auto">
+      <iframe src="https://calendar.google.com/calendar/embed?src=en.south_africa%23holiday%40group.v.calendar.google.com&ctz=Africa%2FJohannesburg" style="border:0" width="100%" height="600" frameborder="0" scrolling="no"></iframe>
+    </div>
+  </section>
+
+  <!-- Side Hustles Section -->
+  <section class="py-12 px-6">
+    <h2 class="text-3xl font-bold text-center text-blue-700 mb-8">Student Side Hustles</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div class="card">
+        <h3 class="text-xl font-semibold">Tutoring Services</h3>
+        <p class="text-gray-600">Offering tutoring in Math and Physics. Affordable and flexible.</p>
+        <p class="text-sm text-gray-500 mt-2">Contact: 071 123 4567</p>
+      </div>
+      <div class="card">
+        <h3 class="text-xl font-semibold">Graphic Design</h3>
+        <p class="text-gray-600">Logos, posters, and branding for your business or project.</p>
+        <p class="text-sm text-gray-500 mt-2">Contact: 073 987 6543</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Forum Section -->
+  <section class="py-12 px-6">
+    <h2 class="text-3xl font-bold text-center text-blue-700 mb-8">Student Forum</h2>
+    <div class="space-y-4">
+      <div class="card">
+        <h3 class="text-xl font-semibold">Best study spots on campus?</h3>
+        <p class="text-gray-600">Share your favorite locations for focused study sessions.</p>
+      </div>
+      <div class="card">
+        <h3 class="text-xl font-semibold">AI Tools for Students</h3>
+        <p class="text-gray-600">What AI apps or extensions are you using for productivity?</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Polls Section -->
+  <section class="py-12 px-6 bg-gray-100">
+    <h2 class="text-3xl font-bold text-center text-blue-700 mb-8">Weekly Poll</h2>
+    <div class="card max-w-md mx-auto">
+      <h3 class="text-xl font-semibold mb-4">Should we host more networking events?</h3>
+      <div class="space-y-2">
+        <button onclick="alert('Thanks for voting!')" class="btn w-full">Yes</button>
+        <button onclick="alert('Thanks for voting!')" class="btn w-full bg-gray-300 text-black hover:bg-gray-400">No</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Profile Section -->
+  <section class="py-12 px-6">
+    <h2 class="text-3xl font-bold text-center text-blue-700 mb-8">Your Profile</h2>
+    <div class="card max-w-md mx-auto text-center">
+      <img src="image/45.png" class="mx-auto rounded-full mb-4" alt="Student Profile Image">
+      <h3 class="text-xl font-semibold">John Doe</h3>
+      <p class="text-gray-600">Degree: BSc Computer Science</p>
+      <p class="text-gray-600">Interests: Coding, Events, Gaming</p>
+    </div>
+  </section>
+
+  <script>
+    function toggleDarkMode() {
+      document.body.classList.toggle('dark-mode');
+      const isDark = document.body.classList.contains('dark-mode');
+      document.body.classList.toggle('bg-gray-900', isDark);
+      document.body.classList.toggle('text-white', isDark);
+    }
+
+    function updateClock() {
+      const now = new Date();
+      document.getElementById('clock').textContent = now.toLocaleTimeString();
+    }
+    setInterval(updateClock, 1000);
+    updateClock();
+  </script>
+</body>
+</html>
